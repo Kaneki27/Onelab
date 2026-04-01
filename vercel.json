@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "buildCommand": "cd frontend && npm install && npm run build",
+  "buildCommand": "export NODE_OPTIONS='--experimental-modules' && cd frontend && npm install && npm run build",
   "outputDirectory": "frontend/dist",
   "framework": "vite",
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs18.x"
-    }
+  "installCommand": "npm install --legacy-peer-deps",
+  "env": {
+    "NODE_ENV": "production"
   }
 }

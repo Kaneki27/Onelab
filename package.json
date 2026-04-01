@@ -1,0 +1,14 @@
+{
+  "name": "reconciliation-tool",
+  "version": "1.0.0",
+  "description": "Payments reconciliation dashboard with gap detection",
+  "private": true,
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "dev": "concurrently 'cd backend && npm start' 'cd frontend && npm run dev'",
+    "test": "cd backend && npm test"
+  },
+  "keywords": ["reconciliation", "payments", "dashboard"],
+  "author": "",
+  "license": "MIT"
+}
