@@ -12,7 +12,10 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const API_URL = 'http://localhost:3001/api';
+  // Dynamic API URL for both local dev and Vercel deployment
+  const API_URL = typeof window !== 'undefined' && window.location.hostname === 'localhost'
+    ? 'http://localhost:3001/api'
+    : '/api';
 
   const fetchData = async () => {
     try {

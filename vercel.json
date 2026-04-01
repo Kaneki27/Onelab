@@ -1,20 +1,11 @@
 {
   "version": 2,
-  "buildCommand": "cd frontend && npm install && npm run build && cd ../backend && npm install",
+  "buildCommand": "cd frontend && npm install && npm run build",
   "outputDirectory": "frontend/dist",
   "framework": "vite",
   "functions": {
-    "backend/**/*.js": {
+    "api/**/*.js": {
       "runtime": "nodejs18.x"
     }
-  },
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/backend/server.js"
-    }
-  ],
-  "env": {
-    "PORT": "3001"
   }
 }
