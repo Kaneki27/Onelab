@@ -1,0 +1,15 @@
+node_modules/
+.DS_Store
+dist/
+build/
+.env
+.env.local
+.env.*.local
+*.log
+.vite/
+.cache/
+.turbo/
+.next/
+out/
+.vercel/
+.git/
